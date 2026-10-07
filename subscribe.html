@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вкусно и просто — Подписка</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        .nav-link {
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        fieldset {
+            border: 1px solid rgba(230, 81, 0, 0.2);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+        legend {
+            padding: 0 10px;
+            font-size: 18px;
+        }
+        input[type="text"], input[type="email"], input[type="url"], select, textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 6px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        textarea {
+            max-width: 500px;
+        }
+        button {
+            padding: 10px 25px;
+            font-size: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-family: inherit;
+        }
+        button[type="submit"] {
+            background: #e65100;
+            color: #fff;
+            box-shadow: 0 2px 6px rgba(230, 81, 0, 0.3);
+        }
+        button[type="reset"] {
+            background: #ffe0b2;
+            color: #e65100;
+        }
+    </style>
+</head>
+<body bgcolor="#fff8f0" text="#3e2723" link="#e65100" vlink="#6d4c41" alink="#ff9800">
+
+<a name="top"></a>
+
+<!-- Добавлена единая шапка сайта -->
+<table width="100%" cellpadding="10" cellspacing="0" border="0" style="margin-top: 10px;">
+<tr>
+    <td width="120" align="center">
+        <img src="images/logo.jpg" alt="Логотип блога" width="100" height="100" border="0" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(62, 39, 35, 0.15);">
+    </td>
+    <td align="left" valign="middle">
+        <h1><font color="#e65100" size="6">🍳 Вкусно и просто</font></h1>
+        <font size="2" color="#8d6e63">Домашние рецепты каждый день</font>
+    </td>
+    <td align="right" valign="middle" style="padding-right: 20px;">
+        <font size="2" color="#e65100">
+            <b>Сегодня готовим:</b><br>
+            <marquee direction="left" scrollamount="2" width="200" style="background: #fff; padding: 5px 10px; border-radius: 20px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); margin-top: 5px;">
+                Пасту, крем-суп, шарлотку и пиццу
+            </marquee>
+        </font>
+    </td>
+</tr>
+</table>
+
+<hr color="#e65100" size="1">
+<p align="center">
+    <a href="index.html" class="nav-link">Главная</a> | 
+    <a href="recipes.html" class="nav-link">Рецепты</a> | 
+    <a href="categories.html" class="nav-link">Категории</a> | 
+    <a href="recipe-detail.html" class="nav-link">Рецепт дня</a> | 
+    <a href="subscribe.html" class="nav-link"><b>Подписка</b></a> | 
+    <a href="about.html" class="nav-link">О блоге</a>
+</p>
+<hr color="#e65100" size="1">
+
+<h2 align="center"><font color="#6d4c41" size="5">Подписка на рассылку рецептов</font></h2>
+<p align="center" style="max-width: 700px; margin: 0 auto 25px auto;">
+    Подпишитесь и получайте <b>новые рецепты</b> каждую пятницу. Поля со звёздочкой (<font color="#c62828">*</font>) обязательны.
+</p>
+
+<table width="75%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+    <td>
+        <form action="#" method="post" enctype="text/plain">
+        <fieldset>
+            <legend><b><font color="#e65100">Личные данные</font></b></legend>
+            <p>
+                <label for="name">Имя <font color="#c62828">*</font>:</label><br>
+                <input type="text" id="name" name="name" required placeholder="Как к вам обращаться?">
+            </p>
+            <p>
+                <label for="email">Email <font color="#c62828">*</font>:</label><br>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </p>
+            <p>
+                <label for="birth">Дата рождения:</label><br>
+                <input type="date" id="birth" name="birth" style="padding: 6px 12px; border: 1px solid #ccc; border-radius: 6px; margin-top: 6px;">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend><b><font color="#e65100">Кулинарные предпочтения</font></b></legend>
+            <p>
+                <label>Что вам интересно <font color="#c62828">*</font>:</label><br style="margin-bottom: 5px;">
+                <input type="checkbox" id="c1" name="interests" value="breakfast"> <label for="c1">Завтраки</label>&nbsp;&nbsp;
+                <input type="checkbox" id="c2" name="interests" value="lunch"> <label for="c2">Обеды</label>&nbsp;&nbsp;
+                <input type="checkbox" id="c3" name="interests" value="dinner"> <label for="c3">Ужины</label>&nbsp;&nbsp;
+                <input type="checkbox" id="c4" name="interests" value="desserts"> <label for="c4">Десерты</label>&nbsp;&nbsp;
+                <input type="checkbox" id="c5" name="interests" value="drinks"> <label for="c5">Напитки</label>
+            </p>
+            <p>
+                <label for="diet">Тип питания:</label><br>
+                <select id="diet" name="diet">
+                    <optgroup label="Обычное">
+                        <option value="any">Без ограничений</option>
+                    </optgroup>
+                    <optgroup label="Особое">
+                        <option value="veg">Вегетарианское</option>
+                        <option value="vegan">Веганское</option>
+                        <option value="keto">Кето</option>
+                        <option value="gluten">Без глютена</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label>Частота рассылки <font color="#c62828">*</font>:</label><br style="margin-bottom: 5px;">
+                <input type="radio" id="f1" name="frequency" value="daily" required> <label for="f1">Каждый день</label>&nbsp;&nbsp;
+                <input type="radio" id="f2" name="frequency" value="weekly"> <label for="f2">Раз в неделю</label>&nbsp;&nbsp;
+                <input type="radio" id="f3" name="frequency" value="monthly"> <label for="f3">Раз в месяц</label>
+            </p>
+            <p>
+                <label for="skill">Ваш уровень готовки:</label><br>
+                <input type="range" id="skill" name="skill" min="1" max="10" value="5" style="max-width: 400px; width:100%; margin-top: 8px;">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend><b><font color="#e65100">Пожелания</font></b></legend>
+            <p>
+                <label for="wish">Какие рецепты вы хотите видеть:</label><br>
+                <textarea id="wish" name="wish" rows="4" placeholder="Например: больше рецептов с курицей..."></textarea>
+            </p>
+            <p>
+                <label for="site">Ваш любимый кулинарный сайт:</label><br>
+                <input type="url" id="site" name="site" placeholder="https://...">
+            </p>
+            <p>
+                <label for="city">Ваш город:</label><br>
+                <input type="text" id="city" name="city" list="cities" placeholder="Выберите или введите город">
+                <datalist id="cities">
+                    <option value="Москва">
+                    <option value="Санкт-Петербург">
+                    <option value="Казань">
+                    <option value="Новосибирск">
+                    <option value="Екатеринбург">
+                </datalist>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend><b><font color="#e65100">Согласия</font></b></legend>
+            <p>
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">Согласен с <a href="#rules-text">правилами рассылки</a> <font color="#c62828">*</font></label>
+            </p>
+            <p>
+                <input type="checkbox" id="promo" name="promo" checked>
+                <label for="promo">Получать информацию об акциях</label>
+            </p>
+            <input type="hidden" name="source" value="website">
+            <input type="hidden" name="date" value="2024-01-15">
+        </fieldset>
+
+        <p align="center" style="margin: 30px 0;">
+            <button type="submit"><b>✉ Подписаться</b></button>
+            <button type="reset">🔄 Очистить</button>
+        </p>
+        </form>
+
+        <hr color="#e65100" size="1" style="margin: 30px 0;">
+        <a name="rules-text"></a>
+        <div style="background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); border-left: 4px solid #6d4c41;">
+            <h3 style="margin-top: 0;"><font color="#6d4c41">Правила рассылки (кратко)</font></h3>
+            <ol type="1" style="padding-left: 20px; margin-bottom: 0;">
+                <li style="margin-bottom: 5px;">Мы отправляем не более 3 писем в неделю.</li>
+                <li style="margin-bottom: 5px;">Ваши данные не передаются третьим лицам.</li>
+                <li style="margin-bottom: 5px;">Отписаться можно в один клик из любого письма.</li>
+                <li>Мы не рассылаем спам.</li>
+            </ol>
+        </div>
+    </td>
+</tr>
+</table>
+
+<br><br>
+<hr color="#e65100" size="1">
+<p align="center" style="font-size: 12px; color: #8d6e63; margin-bottom: 20px;">
+    &copy; 2024 «Вкусно и просто». Все права защищены. | Автор проекта: <b>Анастасия</b>
+</p>
+
+</body>
+</html>

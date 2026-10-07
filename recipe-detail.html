@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вкусно и просто — Рецепт дня</title>
+    <!-- Стили для современного и красивого внешнего вида сайта -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        /* Красивая картинка с мягкой тенью и закруглением */
+        .recipe-img {
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(62, 39, 35, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .recipe-img:hover {
+            transform: scale(1.02);
+        }
+        /* Стильные и аккуратные списки ингредиентов */
+        ul.ingredients-list {
+            padding-left: 20px;
+        }
+        ul.ingredients-list li {
+            margin-bottom: 8px;
+            color: #4e342e;
+        }
+        /* Современный вид таблицы без толстых рамок */
+        .modern-table {
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: none !important;
+        }
+        .modern-table th {
+            padding: 12px;
+            font-size: 16px;
+        }
+        .modern-table td {
+            padding: 12px 15px;
+            font-size: 15px;
+            border-bottom: 1px solid rgba(230, 81, 0, 0.1);
+        }
+        /* Красивая цитата автора */
+        blockquote {
+            background-color: #fff3e0;
+            border-left: 4px solid #e65100;
+            padding: 15px 20px;
+            margin: 20px auto;
+            border-radius: 0 8px 8px 0;
+            max-width: 85%;
+        }
+        /* Сноски внизу */
+        .footnotes {
+            font-size: 13px;
+            color: #8d6e63;
+            line-height: 1.8;
+            background: #fdf5e6;
+            padding: 10px 15px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+        .nav-link {
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body bgcolor="#fff8f0" text="#3e2723" link="#e65100" vlink="#6d4c41" alink="#ff9800">
+
+<a name="top"></a>
+
+<!-- Добавлена единая зеленая круглая шапка сайта -->
+<table width="100%" cellpadding="10" cellspacing="0" border="0" style="margin-top: 10px;">
+<tr>
+    <td width="120" align="center">
+        <img src="images/logo.jpg" alt="Логотип блога" width="100" height="100" border="0" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(62, 39, 35, 0.15);">
+    </td>
+    <td align="left" valign="middle">
+        <h1><font color="#e65100" size="6">🍳 Вкусно и просто</font></h1>
+        <font size="2" color="#8d6e63">Домашние рецепты каждый день</font>
+    </td>
+    <td align="right" valign="middle" style="padding-right: 20px;">
+        <font size="2" color="#e65100">
+            <b>Сегодня готовим:</b><br>
+            <marquee direction="left" scrollamount="2" width="200" style="background: #fff; padding: 5px 10px; border-radius: 20px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); margin-top: 5px;">
+                Пасту, крем-суп, шарлотку и пиццу
+            </marquee>
+        </font>
+    </td>
+</tr>
+</table>
+
+<hr color="#e65100" size="1">
+<p align="center">
+    <a href="index.html" class="nav-link">Главная</a> | 
+    <a href="recipes.html" class="nav-link">Рецепты</a> | 
+    <a href="categories.html" class="nav-link">Категории</a> | 
+    <a href="recipe-detail.html" class="nav-link"><b>Рецепт дня</b></a> | 
+    <a href="subscribe.html" class="nav-link">Подписка</a> | 
+    <a href="about.html" class="nav-link">О блоге</a>
+</p>
+<hr color="#e65100" size="1">
+
+<h2 align="center"><font color="#6d4c41" size="6">Рецепт дня: Паста карбонара</font></h2>
+
+<table width="85%" align="center" cellpadding="20" border="0">
+<tr>
+    <td width="45%" valign="top" align="center">
+        <img src="images/recipes/pasta.jpg" alt="Паста карбонара" width="280" border="0" class="recipe-img">
+        <p align="center">
+            <font size="2" color="#8d6e63"><i>Классическая итальянская паста</i></font>
+        </p>
+    </td>
+    <td width="55%" valign="top" style="padding-left: 30px;">
+        <h3><font color="#e65100" size="5">📄 Ингредиенты</font></h3>
+        <font size="4">
+            <ul type="square" class="ingredients-list">
+                <li>Спагетти – <b>200 г</b></li>
+                <li>Бекон – <b>150 г</b></li>
+                <li>Яйца – <b>2 шт.</b></li>
+                <li>Пармезан – <b>50 г</b></li>
+                <li>Чёрный перец – <font color="#8d6e63">по вкусу</font></li>
+                <li>Соль – <font color="#8d6e63">по вкусу</font></li>
+            </ul>
+        </font>
+        <br>
+        <p style="background: #fff; padding: 15px; border-radius: 8px; border-left: 3px solid #6d4c41; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+            <b>⏱ Время:</b> 25 минут<br>
+            <b>👥 Порции:</b> 2 человека<br>
+            <b>⭐ Сложность:</b> <font color="#e65100">Легко</font>
+        </p>
+    </td>
+</tr>
+</table>
+
+<br>
+<h3 align="center"><font color="#e65100" size="5">👩‍🍳 Пошаговое приготовление</font></h3>
+
+<table width="85%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff3e0" class="modern-table">
+<tr bgcolor="#e65100">
+    <th width="8%" align="center"><font color="#fff8f0">№</font></th>
+    <th align="left"><font color="#fff8f0">Шаг приготовления</font></th>
+</tr>
+<tr>
+    <td align="center"><b>1</b></td>
+    <td>Отварите спагетти в подсоленной воде до состояния <i>аль денте</i>.</td>
+</tr>
+<tr bgcolor="#ffe0b2">
+    <td align="center"><b>2</b></td>
+    <td>Обжарьте бекон на сухой сковороде до хрустящей корочки.</td>
+</tr>
+<tr>
+    <td align="center"><b>3</b></td>
+    <td>В миске смешайте яйца, тёртый пармезан и чёрный перец.</td>
+</tr>
+<tr bgcolor="#ffe0b2">
+    <td align="center"><b>4</b></td>
+    <td>Слейте воду, добавьте пасту к бекону, снимите с огня.</td>
+</tr>
+<tr>
+    <td align="center"><b>5</b></td>
+    <td>Влейте яичную смесь, быстро перемешайте. Подавайте сразу.</td>
+</tr>
+</table>
+
+<blockquote>
+    <p style="margin: 0; font-size: 16px;">«Секрет карбонары – в температуре. Сняли с огня – сразу влили яйца, тогда получится нежный соус, а не омлет.»</p>
+    <p align="right" style="margin: 5px 0 0 0; color: #e65100;"><b>— Анастасия, автор блога</b></p>
+</blockquote>
+
+<table width="85%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+    <td>
+        <h3><font color="#e65100" size="4">💡 Полезные термины</font></h3>
+        <dl style="line-height: 1.8;">
+            <dt style="color: #e65100; font-weight: bold; margin-top: 10px;">Аль денте</dt>
+            <dd style="margin-left: 15px; color: #5d4037;">Состояние пасты, когда она мягкая снаружи, но сохраняет упругость внутри.</dd>
+            <dt style="color: #e65100; font-weight: bold; margin-top: 10px;">Пармезан</dt>
+            <dd style="margin-left: 15px; color: #5d4037;">Твёрдый итальянский сыр с пикантным вкусом и глубоким ароматом.</dd>
+            <dt style="color: #e65100; font-weight: bold; margin-top: 10px;">Панчетта</dt>
+            <dd style="margin-left: 15px; color: #5d4037;">Традиционный итальянский сыровяленый бекон с прослойками жира.</dd>
+        </dl>
+        <br>
+        <div class="footnotes">
+            <sup>1</sup> Рецепт полностью адаптирован для обычной домашней кухни.<br>
+            <sup>2</sup> Калорийность готового блюда указана приблизительно.
+        </div>
+    </td>
+</tr>
+</table>
+
+<br><br>
+<hr color="#e65100" size="1">
+<table width="85%" align="center" cellpadding="10" border="0">
+<tr>
+    <td align="left">
+        <font size="2" color="#8d6e63">
+            &copy; 2024 «Вкусно и просто». Все права защищены.<br>
+            Сайт создан прекрасным автором по имени <b>Анастасия</b>
+        </font>
+    </td>
+    <td align="right"><a href="#top" style="text-decoration: none; font-size: 14px;">Наверх ↑</a></td>
+</tr>
+</table>
+
+</body>
+</html>

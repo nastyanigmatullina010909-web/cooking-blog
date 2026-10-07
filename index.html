@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Кулинарный blog Вкусно и просто – домашние рецепты">
+    <meta name="keywords" content="рецепты, кулинария, готовка, домашняя еда">
+    <meta name="author" content="Анастасия">
+    <title>Вкусно и просто – Главная</title>
+    <!-- Стили для современного и красивого внешнего вида сайта -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        /* Стили для картинок: мягкая тень и закругление */
+        .blog-logo {
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(62, 39, 35, 0.15);
+        }
+        .modern-img {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(62, 39, 35, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .modern-img:hover {
+            transform: scale(1.02);
+        }
+        /* Красивые карточки для рецептов недели */
+        .recipe-card {
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(230, 81, 0, 0.05);
+        }
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(230, 81, 0, 0.12);
+        }
+        /* Ссылки-меню без подчеркиваний */
+        .nav-link {
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        .read-more {
+            text-decoration: none;
+            font-weight: bold;
+            color: #e65100;
+        }
+    </style>
+</head>
+<body bgcolor="#fff8f0" text="#3e2723" link="#e65100" vlink="#6d4c41" alink="#ff9800">
+
+<a name="top"></a>
+
+<!-- Шапка сайта -->
+<table width="100%" cellpadding="10" cellspacing="0" border="0" style="margin-top: 10px;">
+<tr>
+    <td width="120" align="center">
+        <img src="images/logo.jpg" alt="Логотип блога" width="100" height="100" border="0" class="blog-logo">
+    </td>
+    <td align="left" valign="middle">
+        <h1><font color="#e65100" size="6">🍳 Вкусно и просто</font></h1>
+        <font size="2" color="#8d6e63">Домашние рецепты каждый день</font>
+    </td>
+    <td align="right" valign="middle" style="padding-right: 20px;">
+        <font size="2" color="#e65100">
+            <b>Сегодня готовим:</b><br>
+            <marquee direction="left" scrollamount="2" width="200" style="background: #fff; padding: 5px 10px; border-radius: 20px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); margin-top: 5px;">
+                Пасту, крем-суп, шарлотку и пиццу
+            </marquee>
+        </font>
+    </td>
+</tr>
+</table>
+
+<hr color="#e65100" size="1">
+<p align="center">
+    <a href="index.html" class="nav-link"><b>Главная</b></a> | 
+    <a href="recipes.html" class="nav-link">Рецепты</a> | 
+    <a href="categories.html" class="nav-link">Категории</a> | 
+    <a href="recipe-detail.html" class="nav-link">Рецепт дня</a> | 
+    <a href="subscribe.html" class="nav-link">Подписка</a> | 
+    <a href="about.html" class="nav-link">О блоге</a>
+</p>
+<hr color="#e65100" size="1">
+
+<!-- Баннер -->
+<p align="center" style="margin: 25px 0;">
+    <img src="images/banner.jpg" alt="Баннер блога" width="800" height="200" border="0" class="modern-img" usemap="#bannermap">
+    <map name="bannermap">
+        <area shape="rect" coords="0,0,266,200" href="recipes.html" alt="Рецепты" title="Все рецепты">
+        <area shape="rect" coords="266,0,533,200" href="categories.html" alt="Категории" title="Категории блюд">
+        <area shape="rect" coords="533,0,800,200" href="subscribe.html" alt="Подписка" title="Подписаться">
+    </map>
+</p>
+
+<!-- О блоге -->
+<h2 align="center"><font color="#e65100" size="5">О нашем блоге</font></h2>
+<table width="85%" align="center" cellpadding="15" border="0">
+<tr>
+    <td width="60%" valign="top" style="font-size: 16px;">
+        <p align="justify">
+            <b>«Вкусно и просто»</b> – это блог о домашней кухне, где каждый рецепт проверен <i>на собственной кухне</i>. Мы публикуем <u>простые пошаговые рецепты</u> с фото и понятными объяснениями. Готовить дома – это легко!
+        </p>
+        <p align="justify">
+            Каждую неделю выходят новые рецепты: от быстрых завтраков до праздничных тортов. Подписывайтесь на рассылку, чтобы ничего не пропустить.
+        </p>
+    </td>
+    <td width="40%" valign="top" align="center">
+        <img src="images/kitchen.jpg" alt="Наша кухня" width="300" height="200" border="0" class="modern-img"><br>
+        <font size="2" color="#8d6e63" style="display: block; margin-top: 8px;"><i>Так выглядит наша кухня</i></font>
+    </td>
+</tr>
+</table>
+
+<hr color="#e65100" size="1" style="margin: 30px 0;">
+
+<!-- Рецепты недели (карточки) -->
+<h2 align="center"><font color="#6d4c41" size="5">Рецепты недели</font></h2>
+<table width="85%" align="center" cellpadding="15" cellspacing="15" border="0">
+<tr>
+    <td width="33%" valign="top" bgcolor="#ffecb3" class="recipe-card">
+        <h3><font color="#e65100">🍝 Паста карбонара</font></h3>
+        <table width="100%" cellpadding="3" border="0" style="border-bottom: 1px dashed rgba(62,39,35,0.1); padding-bottom: 5px; margin-bottom: 10px;">
+        <tr>
+            <td><font size="2" color="#6d4c41">⏱ 25 минут</font></td>
+            <td align="right"><font size="2" color="#6d4c41">👥 2 порции</font></td>
+        </tr>
+        </table>
+        <p align="justify" style="font-size: 14px; color: #4e342e;">Классическая итальянская паста с хрустящим беконом, желтками и ароматным пармезаном.</p>
+        <p align="right" style="margin-bottom: 0;"><a href="#recipe1" class="read-more">Читать ➔</a></p>
+    </td>
+    <td width="33%" valign="top" bgcolor="#ffecb3" class="recipe-card">
+        <h3><font color="#e65100">🥣 Крем-суп из тыквы</font></h3>
+        <table width="100%" cellpadding="3" border="0" style="border-bottom: 1px dashed rgba(62,39,35,0.1); padding-bottom: 5px; margin-bottom: 10px;">
+        <tr>
+            <td><font size="2" color="#6d4c41">⏱ 40 минут</font></td>
+            <td align="right"><font size="2" color="#6d4c41">👥 4 порции</font></td>
+        </tr>
+        </table>
+        <p align="justify" style="font-size: 14px; color: #4e342e;">Нежнейший осенний суп-пюре со спелой тыквой, густыми сливками и пикантным имбирём.</p>
+        <p align="right" style="margin-bottom: 0;"><a href="#recipe2" class="read-more">Читать ➔</a></p>
+    </td>
+    <td width="33%" valign="top" bgcolor="#ffecb3" class="recipe-card">
+        <h3><font color="#e65100">🍰 Шарлотка</font></h3>
+        <table width="100%" cellpadding="3" border="0" style="border-bottom: 1px dashed rgba(62,39,35,0.1); padding-bottom: 5px; margin-bottom: 10px;">
+        <tr>
+            <td><font size="2" color="#6d4c41">⏱ 50 минут</font></td>
+            <td align="right"><font size="2" color="#6d4c41">👥 6 порций</font></td>
+        </tr>
+        </table>
+        <p align="justify" style="font-size: 14px; color: #4e342e;">Самый простой и пышный яблочный пирог к чаю, который точно получится с первого раза.</p>
+        <p align="right" style="margin-bottom: 0;"><a href="#recipe3" class="read-more">Читать ➔</a></p>
+    </td>
+</tr>
+</table>
+
+<hr color="#e65100" size="1" style="margin: 30px 0;">
+
+<!-- Подробные рецепты-якоря -->
+<h2 align="center"><font color="#6d4c41" size="5">Подробные рецепты</font></h2>
+
+<table width="85%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+    <td>
+        <a name="recipe1"></a>
+        <h3 style="background: #fff3e0; padding: 10px 15px; border-radius: 6px; border-left: 4px solid #e65100;"><font color="#e65100">🍝 Паста карбонара</font></h3>
+        <p align="justify" style="font-size: 15px; padding-left: 5px;">
+            Отварите спагетти до состояния <b>аль денте</b>. Обжарьте бекон до хруста. Смешайте яйца с пармезаном и перцем. Соедините горячую пасту с беконом, снимите с огня и влейте яичную смесь. <u>Важно:</u> не готовьте соус на огне, иначе яйца свернутся в омлет.
+        </p>
+        <p align="right"><a href="#top" style="text-decoration: none; font-size: 13px;">↑ Наверх к меню</a></p>
+        <br>
+
+        <a name="recipe2"></a>
+        <h3 style="background: #fff3e0; padding: 10px 15px; border-radius: 6px; border-left: 4px solid #e65100;"><font color="#e65100">🥣 Крем-суп из тыквы</font></h3>
+        <p align="justify" style="font-size: 15px; padding-left: 5px;">
+            Запеките нарезанную тыкву с луком и чесноком <b>30 минут</b> при 200°C в духовке. Пробейте овощи блендером до однородности, добавьте горячий бульон и сливки. Проварите на медленном огне еще 5 минут, посолите, добавьте тертый имбирь. Подавайте с очищенными тыквенными семечками.
+        </p>
+        <p align="right"><a href="#top" style="text-decoration: none; font-size: 13px;">↑ Наверх к меню</a></p>
+        <br>
+
+        <a name="recipe3"></a>
+        <h3 style="background: #fff3e0; padding: 10px 15px; border-radius: 6px; border-left: 4px solid #e65100;"><font color="#e65100">🍰 Шарлотка</font></h3>
+        <p align="justify" style="font-size: 15px; padding-left: 5px;">
+            Тщательно взбейте миксером <b>4 яйца</b> с 1 стаканом сахара до белой пены. Аккуратно подмешайте стакан муки и щепотку соды. Нарежьте 3 крупных яблока тонкими дольками, выложите в форму и залейте получившимся тестом. Выпекайте в духовке <u>35–40 минут</u> при температуре 180°C.
+        </p>
+        <p align="right"><a href="#top" style="text-decoration: none; font-size: 13px;">↑ Наверх к меню</a></p>
+    </td>
+</tr>
+</table>
+
+<br><br>
+<hr color="#e65100" size="1">
+
+<!-- Подвал сайта -->
+<table width="85%" align="center" cellpadding="10" border="0">
+<tr>
+    <td align="left">
+        <font size="2" color="#8d6e63">
+            &copy; 2024 «Вкусно и просто». Все права защищены.<br>
+            Сайт создан прекрасным автором по имени <b>Анастасия</b>
+        </font>
+    </td>
