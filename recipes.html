@@ -3,61 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Вкусно и просто — Рецепты</title>
-    <!-- Стили для современного и красивого внешнего вида сайта -->
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
         }
-        /* Стили для картинок: мягкая тень и закругление */
-        .modern-img {
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(62, 39, 35, 0.15);
-            transition: transform 0.3s ease;
-        }
-        .modern-img:hover {
-            transform: scale(1.02);
-        }
-        /* Современный вид таблиц без толстых рамок */
-        .modern-table {
-            border-collapse: collapse;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            border: none !important;
-            table-layout: fixed; /* Закрепляет ширину колонок жестко */
-        }
-        .modern-table th {
-            padding: 12px;
-            font-size: 16px;
-        }
-        .modern-table td {
-            padding: 12px 15px;
-            font-size: 15px;
-            border-bottom: 1px solid rgba(230, 81, 0, 0.1);
-        }
-        /* Ссылки-меню без подчеркиваний */
         .nav-link {
             text-decoration: none;
             margin: 0 10px;
             font-weight: 500;
         }
-                /* Делаем таблицы шире и добавляем красивые рамки */
-        table {
-            max-width: 1000px !important; /* Увеличили ширину до оптимального размера */
-            width: 100% !important;
-            margin: 30px auto !important; /* Центрируем на странице с хорошим отступом */
-            box-shadow: 0 4px 15px rgba(62, 39, 35, 0.06);
-            border-radius: 8px;
-            border-collapse: collapse;    /* Включаем современный режим рамок */
-            overflow: hidden;
+
+        /* Центрируем блоки категорий, заголовки и таблицы вместе */
+        .recipe-section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 15px;
         }
 
-        /* Настраиваем разделители и отступы внутри ячеек */
-        table th, table td {
-            padding: 12px 18px !important; /* Увеличенные комфортные отступы */
-            text-align: center;
-            border: 1px solid rgba(230, 81, 0, 0.15) !important; /* Красивая тонкая оранжевая рамка для всех ячеек */
+        /* Красивое оформление для компактных таблиц рецептов */
+        table[border="1"] {
+            width: 100% !important;
+            box-shadow: 0 4px 15px rgba(62, 39, 35, 0.05);
+            border-collapse: collapse !important;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        table[border="1"] td, table[border="1"] th {
+            text-align: center !important;
+            padding: 12px 18px !important;
         }
     </style>
 </head>
@@ -65,11 +41,24 @@
 
 <a name="top"></a>
 
-<!-- Шапка сайта -->
+<!-- Шапка сайта с круглым логотипом -->
 <table width="100%" cellpadding="10" cellspacing="0" border="0" style="margin-top: 10px;">
 <tr>
-    <td width="120" align="center"><img src="images/logo.jpg" alt="Логотип" width="100" height="100" border="0" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(62, 39, 35, 0.15);"></td>
-    <td align="left"><h1><font color="#e65100" size="6">Все рецепты</font></h1></td>
+    <td width="120" align="center">
+        <img src="images/logo.jpg" alt="Логотип блога" width="100" height="100" border="0" style="border-radius: 50%;">
+    </td>
+    <td align="left" valign="middle">
+        <h1><font color="#e65100" size="6">🍳 Вкусно и просто</font></h1>
+        <font size="2" color="#8d6e63">Домашние рецепты каждый день</font>
+    </td>
+    <td align="right" valign="middle" style="padding-right: 20px;">
+        <font size="2" color="#e65100">
+            <b>Сегодня готовим:</b><br>
+            <marquee direction="left" scrollamount="2" width="200" style="background: #fff; padding: 5px 10px; border-radius: 20px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); margin-top: 5px;">
+                Пасту, крем-суп, шарлотку и пиццу
+            </marquee>
+        </font>
+    </td>
 </tr>
 </table>
 
@@ -84,129 +73,164 @@
 </p>
 <hr color="#e65100" size="1">
 
-<!-- Интерактивное меню-категории -->
+<!-- Картинка-меню категорий (Шаг 13) -->
 <h2 align="center"><font color="#6d4c41" size="5">Выбери категорию</font></h2>
-<p align="center" style="margin: 20px 0;">
-    <img src="images/menu.jpg" alt="Категории блюд" width="450" height="600" border="0" class="modern-img" usemap="#catmap">
+<p align="center">
+    <img src="images/menu.jpg" alt="Категории блюд" width="600" border="3" usemap="#catmap" style="height: auto !important;">
     <map name="catmap">
-        <area shape="circle" coords="225,150,80" href="#salads" alt="Салаты" title="Салаты">
-        <area shape="circle" coords="225,300,80" href="#soups" alt="Супы" title="Супы">
-        <area shape="circle" coords="225,450,80" href="#desserts" alt="Десерты" title="Десерты">
+        <area shape="circle" coords="100,150,70" href="#salads" alt="Салаты" title="Салаты">
+        <area shape="circle" coords="300,150,70" href="#soups" alt="Супы" title="Супы">
+        <area shape="circle" coords="500,150,70" href="#desserts" alt="Десерты" title="Десерты">
     </map>
 </p>
 
-<hr color="#e65100" size="1" style="margin: 30px 0;">
+<hr color="#e65100" size="3">
 
-<!-- Сводная таблица всех рецептов (Колонки теперь зафиксированы) -->
-<h2 align="center"><font color="#6d4c41" size="5">Все рецепты блога</font></h2>
+<!-- Общий каталог рецептов -->
+<div class="recipe-section">
+    <h2 align="center"><font color="#6d4c41" size="5">Все рецепты блога</font></h2>
+    <table border="1" cellpadding="10" cellspacing="0" bgcolor="#fff3e0" bordercolor="#e65100">
+    <caption><b><font color="#e65100">Каталог рецептов – 2024</font></b></caption>
+    <tr bgcolor="#e65100">
+        <th rowspan="2"><font color="#fff8f0">Блюдо</font></th>
+        <th colspan="2"><font color="#fff8f0">Время</font></th>
+        <th rowspan="2"><font color="#fff8f0">Сложность</font></th>
+        <th rowspan="2"><font color="#fff8f0">Порции</font></th>
+    </tr>
+    <tr bgcolor="#e65100">
+        <th><font color="#fff8f0">Подготовка</font></th>
+        <th><font color="#fff8f0">Готовка</font></th>
+    </tr>
+    <tr>
+        <td>🍝 Паста карбонара</td>
+        <td>5 мин</td>
+        <td>20 мин</td>
+        <td><font color="#e65100">Легко</font></td>
+        <td>2</td>
+    </tr>
+    <tr bgcolor="#ffe0b2">
+        <td>🥣 Крем-суп из тыквы</td>
+        <td>10 мин</td>
+        <td>30 мин</td>
+        <td><font color="#e65100">Средне</font></td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>🥧 Шарлотка</td>
+        <td>15 мин</td>
+        <td>40 мин</td>
+        <td><font color="#e65100">Легко</font></td>
+        <td>6</td>
+    </tr>
+    <tr bgcolor="#ffe0b2">
+        <td>🍕 Пицца &laquo;Маргарита&raquo;</td>
+        <td>20 мин</td>
+        <td>15 мин</td>
+        <td><font color="#e65100">Средне</font></td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>🥗 Салат &laquo;Цезарь&raquo;</td>
+        <td>10 мин</td>
+        <td>10 мин</td>
+        <td><font color="#e65100">Легко</font></td>
+        <td>2</td>
+    </tr>
+    <tr bgcolor="#ffe0b2">
+        <td>🍰 Медовик</td>
+        <td>30 мин</td>
+        <td>90 мин</td>
+        <td><font color="#e65100">Сложно</font></td>
+        <td>8</td>
+    </tr>
+    </table>
+</div>
 
-<table width="85%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff3e0" class="modern-table">
-<caption style="margin-bottom: 15px;"><b><font color="#e65100" size="4">Каталог рецептов – 2024</font></b></caption>
-<tr bgcolor="#e65100">
-    <th rowspan="2" width="35%"><font color="#fff8f0">Блюдо</font></th>
-    <th colspan="2" width="30%"><font color="#fff8f0">Время</font></th>
-    <th rowspan="2" width="20%"><font color="#fff8f0">Сложность</font></th>
-    <th rowspan="2" width="15%"><font color="#fff8f0">Порции</font></th>
-</tr>
-<tr bgcolor="#e65100">
-    <th width="15%"><font color="#fff8f0">Подготовка</font></th>
-    <th width="15%"><font color="#fff8f0">Готовка</font></th>
-</tr>
-<tr>
-    <td align="left">🍝 Паста карбонара</td>
-    <td align="center">5 мин</td>
-    <td align="center">20 мин</td>
-    <td align="center"><font color="#e65100"><b>Легко</b></font></td>
-    <td align="center">2</td>
-</tr>
-<tr bgcolor="#ffe0b2">
-    <td align="left">🥣 Крем-суп из тыквы</td>
-    <td align="center">10 мин</td>
-    <td align="center">30 мин</td>
-    <td align="center"><font color="#e65100"><b>Средне</b></font></td>
-    <td align="center">4</td>
-</tr>
-<tr>
-    <td align="left">🍰 Шарлотка</td>
-    <td align="center">15 мин</td>
-    <td align="center">40 мин</td>
-    <td align="center"><font color="#e65100"><b>Легко</b></font></td>
-    <td align="center">6</td>
-</tr>
-<tr bgcolor="#ffe0b2">
-    <td align="left">🍕 Пицца «Маргарита»</td>
-    <td align="center">20 мин</td>
-    <td align="center">15 мин</td>
-    <td align="center"><font color="#e65100"><b>Средне</b></font></td>
-    <td align="center">4</td>
-</tr>
-<tr>
-    <td align="left">🥗 Салат «Цезарь»</td>
-    <td align="center">10 мин</td>
-    <td align="center">10 мин</td>
-    <td align="center"><font color="#e65100"><b>Легко</b></font></td>
-    <td align="center">2</td>
-</tr>
-<tr bgcolor="#ffe0b2">
-    <td align="left">🍰 Медовик</td>
-    <td align="center">30 мин</td>
-    <td align="center">90 мин</td>
-    <td align="center"><font color="#e65100"><b>Сложно</b></font></td>
-    <td align="center">8</td>
-</tr>
-</table>
+<!-- Блок Салаты -->
+<div class="recipe-section">
+    <a name="salads"></a>
+    <h3><font color="#e65100">🥗 Салаты</font></h3>
+    <table border="1" cellpadding="8" cellspacing="0" bgcolor="#fff3e0" bordercolor="#e65100">
+    <tr bgcolor="#e65100">
+        <th><font color="#fff8f0">Название</font></th>
+        <th><font color="#fff8f0">Время</font></th>
+        <th><font color="#fff8f0">Ккал</font></th>
+    </tr>
+    <tr>
+        <td>Цезарь с курицей</td>
+        <td>20 мин</td>
+        <td>320</td>
+    </tr>
+    <tr bgcolor="#ffe0b2">
+        <td>Греческий</td>
+        <td>15 мин</td>
+        <td>180</td>
+    </tr>
+    <tr>
+        <td>Оливье</td>
+        <td>40 мин</td>
+        <td>280</td>
+    </tr>
+    </table>
+</div>
 
-<hr color="#e65100" size="1" style="margin: 40px 0;">
+<!-- Блок Супы -->
+<div class="recipe-section">
+    <a name="soups"></a>
+    <h3><font color="#e65100">🥣 Супы</font></h3>
+    <table border="1" cellpadding="8" cellspacing="0" bgcolor="#fff3e0" bordercolor="#e65100">
+    <tr bgcolor="#e65100">
+        <th><font color="#fff8f0">Название</font></th>
+        <th><font color="#fff8f0">Время</font></th>
+        <th><font color="#fff8f0">Ккал</font></th>
+    </tr>
+    <tr>
+        <td>Крем-суп из тыквы</td>
+        <td>40 мин</td>
+        <td>210</td>
+    </tr>
+    <tr bgcolor="#ffe0b2">
+        <td>Борщ</td>
+        <td>90 мин</td>
+        <td>250</td>
+    </tr>
+    <tr>
+        <td>Куриный с лапшой</td>
+        <td>50 мин</td>
+        <td>190</td>
+    </tr>
+    </table>
+</div>
 
-<!-- Списки рецептов по категориям -->
-<table width="85%" align="center" border="0" cellpadding="0" cellspacing="0">
-<tr>
-    <td>
-        <a name="salads"></a>
-        <h3 style="background: #fff3e0; padding: 10px 15px; border-radius: 6px; border-left: 4px solid #e65100;"><font color="#e65100">🥗 Салаты</font></h3>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff3e0" class="modern-table">
-        <tr bgcolor="#e65100">
-            <th width="50%" align="left"><font color="#fff8f0">Название</font></th>
-            <th width="25%" align="center"><font color="#fff8f0">Время</font></th>
-            <th width="25%" align="center"><font color="#fff8f0">Ккал</font></th>
-        </tr>
-        <tr><td align="left">Цезарь с курицей</td><td align="center">20 мин</td><td align="center">320</td></tr>
-        <tr bgcolor="#ffe0b2"><td align="left">Греческий</td><td align="center">15 мин</td><td align="center">180</td></tr>
-        <tr><td align="left">Оливье</td><td align="center">40 мин</td><td align="center">280</td></tr>
-        </table>
-        <br>
+<!-- Блок Десерты -->
+<div class="recipe-section">
+    <a name="desserts"></a>
+    <h3><font color="#e65100">🍰 Десерты</font></h3>
+    <table border="1" cellpadding="8" cellspacing="0" bgcolor="#fff3e0" bordercolor="#e65100">
+    <tr bgcolor="#e65100">
+        <th><font color="#fff8f0">Название</font></th>
+        <th><font color="#fff8f0">Время</font></th>
+        <th><font color="#fff8f0">Ккал</font></th>
+    </tr>
+    <tr>
+        <td>Шарлотка</td>
+        <td>55 мин</td>
+        <td>290</td>
+    </tr>
+    <tr bgcolor="#ffe0b2">
+        <td>Медовик</td>
+        <td>120 мин</td>
+        <td>410</td>
+    </tr>
+    <tr>
+        <td>Тирамису</td>
+        <td>30 мин</td>
+        <td>350</td>
+    </tr>
+    </table>
+</div>
 
-        <a name="soups"></a>
-        <h3 style="background: #fff3e0; padding: 10px 15px; border-radius: 6px; border-left: 4px solid #e65100;"><font color="#e65100">🥣 Супы</font></h3>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff3e0" class="modern-table">
-        <tr bgcolor="#e65100">
-            <th width="50%" align="left"><font color="#fff8f0">Название</font></th>
-            <th width="25%" align="center"><font color="#fff8f0">Время</font></th>
-            <th width="25%" align="center"><font color="#fff8f0">Ккал</font></th>
-        </tr>
-        <tr><td align="left">Крем-суп из тыквы</td><td align="center">40 мин</td><td align="center">210</td></tr>
-        <tr bgcolor="#ffe0b2"><td align="left">Борщ</td><td align="center">90 мин</td><td align="center">250</td></tr>
-        <tr><td align="left">Куриный с лапшой</td><td align="center">50 мин</td><td align="center">190</td></tr>
-        </table>
-        <br>
-
-        <a name="desserts"></a>
-        <h3 style="background: #fff3e0; padding: 10px 15px; border-radius: 6px; border-left: 4px solid #e65100;"><font color="#e65100">🍰 Десерты</font></h3>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff3e0" class="modern-table">
-        <tr bgcolor="#e65100">
-            <th width="50%" align="left"><font color="#fff8f0">Название</font></th>
-            <th width="25%" align="center"><font color="#fff8f0">Время</font></th>
-            <th width="25%" align="center"><font color="#fff8f0">Ккал</font></th>
-        </tr>
-        <tr><td align="left">Шарлотка</td><td align="center">55 мин</td><td align="center">290</td></tr>
-        <tr bgcolor="#ffe0b2"><td align="left">Медовик</td><td align="center">120 мин</td><td align="center">410</td></tr>
-        <tr><td align="left">Тирамису</td><td align="center">30 мин</td><td align="center">350</td></tr>
-        </table>
-    </td>
-</tr>
-</table>
-
-<!-- ЕДИНЫЙ ФУТЕР САЙТА -->
+<!-- Единый красивый футер -->
 <hr color="#e65100" size="1" style="margin: 40px 0 20px 0;">
 <table width="100%" cellpadding="10" cellspacing="0" border="0" bgcolor="#fff3e0" style="border-radius: 8px; box-shadow: 0 -2px 10px rgba(62, 39, 35, 0.05);">
 <tr>
@@ -228,8 +252,7 @@
     </td>
 </tr>
 </table>
-<!-- КОНЕЦ ЕДИНЫГО ФУТЕРА -->
-
 
 </body>
 </html>
+
