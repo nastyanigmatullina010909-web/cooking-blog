@@ -42,6 +42,23 @@
             margin: 0 10px;
             font-weight: 500;
         }
+                /* Делаем таблицы шире и добавляем красивые рамки */
+        table {
+            max-width: 1000px !important; /* Увеличили ширину до оптимального размера */
+            width: 100% !important;
+            margin: 30px auto !important; /* Центрируем на странице с хорошим отступом */
+            box-shadow: 0 4px 15px rgba(62, 39, 35, 0.06);
+            border-radius: 8px;
+            border-collapse: collapse;    /* Включаем современный режим рамок */
+            overflow: hidden;
+        }
+
+        /* Настраиваем разделители и отступы внутри ячеек */
+        table th, table td {
+            padding: 12px 18px !important; /* Увеличенные комфортные отступы */
+            text-align: center;
+            border: 1px solid rgba(230, 81, 0, 0.15) !important; /* Красивая тонкая оранжевая рамка для всех ячеек */
+        }
     </style>
 </head>
 <body bgcolor="#fff8f0" text="#3e2723" link="#e65100" vlink="#6d4c41" alink="#ff9800">
@@ -189,27 +206,30 @@
 </tr>
 </table>
 
-<br><br>
-<hr color="#e65100" size="1">
-
-<!-- Подвал сайта -->
-<table width="85%" align="center" cellpadding="10" border="0">
+<!-- ЕДИНЫЙ ФУТЕР САЙТА -->
+<hr color="#e65100" size="1" style="margin: 40px 0 20px 0;">
+<table width="100%" cellpadding="10" cellspacing="0" border="0" bgcolor="#fff3e0" style="border-radius: 8px; box-shadow: 0 -2px 10px rgba(62, 39, 35, 0.05);">
 <tr>
-    <td align="left">
+    <td align="left" valign="middle" style="padding-left: 20px;">
+        <font size="3" color="#3e2723"><b>🍳 Вкусно и просто</b></font><br>
+        <font size="2" color="#8d6e63">Домашние рецепты каждый день &copy; 2026</font>
+    </td>
+    <td align="center" valign="middle">
         <font size="2" color="#8d6e63">
-            &copy; 2024 «Вкусно и просто». Все права защищены.<br>
-            Сайт создан прекрасным автором по имени <b>Анастасия</b>
+            <a href="index.html" style="text-decoration: none; color: #e65100; margin: 0 5px;">Главная</a> | 
+            <a href="recipes.html" style="text-decoration: none; color: #e65100; margin: 0 5px;">Рецепты</a> | 
+            <a href="about.html" style="text-decoration: none; color: #e65100; margin: 0 5px;">О блоге</a>
         </font>
     </td>
-    <td align="right" valign="middle">
-        <font size="2">
-            <a href="about.html" style="text-decoration: none; margin-left: 15px;">Контакты</a>
-            <a href="about.html#social" style="text-decoration: none; margin-left: 15px;">Соцсети</a>
-            <a href="#top" style="text-decoration: none; margin-left: 15px; font-weight: bold;">Наверх ↑</a>
+    <td align="right" valign="middle" style="padding-right: 20px;">
+        <font size="2" color="#8d6e63">
+            Сделано с &hearts; для любителей готовить
         </font>
     </td>
 </tr>
 </table>
+<!-- КОНЕЦ ЕДИНЫГО ФУТЕРА -->
+
 
 </body>
 </html>

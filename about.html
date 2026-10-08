@@ -22,14 +22,26 @@
             padding: 12px 18px;
             border-radius: 8px;
             margin-bottom: 12px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-            border: 1px solid rgba(230, 81, 0, 0.1);
+            box-shadow: 0 2px 6px rgba(62, 39, 35, 0.05);
+            border: 1px solid rgba(230, 81, 0, 0.15);
+    
+               /* Добавляем плавность переходов */
+           transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
+
+                 /* Эффект, когда мы наводим мышку на плашку вопроса */
+        details:hover {
+            transform: translateY(-2px); /* Легкий взлет вверх */
+            box-shadow: 0 5px 15px rgba(62, 39, 35, 0.1); /* Мягкая тень */
+            background-color: #fffaf5; /* Легкая теплая подсветка */
+        }
+
         summary {
             font-weight: bold;
             cursor: pointer;
             color: #e65100;
             outline: none;
+            padding: 4px 0;
         }
         details p {
             margin-top: 10px;
@@ -43,13 +55,42 @@
         li {
             margin-bottom: 6px;
         }
-    </style>
+        
+        /* СЮДА МЫ ПРОСТО ДОПИСЫВАЕМ НАШИ НОВЫЕ ПРАВИЛА: */
+        .contact-card {
+            text-decoration: none !important; 
+            display: flex !important; 
+            align-items: center !important; 
+            background: #ffffff !important; 
+            padding: 12px 16px !important; 
+            border-radius: 8px !important; 
+            border: 1px solid rgba(230, 81, 0, 0.15) !important; 
+            box-shadow: 0 2px 5px rgba(62, 39, 35, 0.05) !important; 
+            margin-bottom: 10px !important;
+            transition: all 0.3s ease-in-out !important;
+        }
+        .contact-card:hover {
+            transform: translateY(-4px) !important; 
+            box-shadow: 0 6px 20px rgba(62, 39, 35, 0.15) !important; 
+            background-color: #fff4e6 !important; 
+        }
+        .map-link-card {
+            text-decoration: none !important; 
+            display: inline-block !important; 
+            width: 100% !important; 
+            max-width: 400px !important;
+            transition: all 0.3s ease-in-out !important;
+        }
+        .map-link-card:hover {
+            transform: scale(1.03) !important; 
+            box-shadow: 0 6px 20px rgba(62, 39, 35, 0.15) !important;
+        }
+    </style>  
 </head>
 <body bgcolor="#fff8f0" text="#3e2723" link="#e65100" vlink="#6d4c41" alink="#ff9800">
 
 <a name="top"></a>
 
-<!-- Добавлена единая шапка сайта -->
 <table width="100%" cellpadding="10" cellspacing="0" border="0" style="margin-top: 10px;">
 <tr>
     <td width="120" align="center">
@@ -92,7 +133,7 @@
     <td width="70%" valign="top" style="padding-left: 20px; font-size: 16px;">
         <h3><font color="#e65100" size="5">Привет! 👋</font></h3>
         <p align="justify">
-            Меня зовут <b>Анастасия</b>, и я готовлю дома уже <u>10 лет</u>. Этот blog – моя кулинарная записная книжка, в которой я делюсь <i>простыми и проверенными рецептами</i>. Все рецепты я тестирую сама, прежде чем опубликовать.
+            Меня зовут <b>Анастасия</b>, и я готовлю дома уже <u>10 лет</u>. Этот блог – моя кулинарная записная книжка, в которой я делюсь <i>простыми и проверенными рецептами</i>. Все рецепты я тестирую сама, прежде чем опубликовать.
         </p>
         <p align="justify">
             На блоге вы найдёте рецепты на каждый день – от быстрых завтраков до праздничных ужинов. Готовьте с удовольствием!
@@ -136,22 +177,40 @@
 <table width="85%" align="center" cellpadding="15" border="0">
 <tr>
     <td width="50%" valign="top">
-        <h3><font color="#e65100">Связаться с нами</font></h3>
-        <ul type="square">
-            <li><b>Email:</b> <a href="mailto:hello@vkusno.ru">hello@vkusno.ru</a></li>
-            <li><b>Telegram:</b> <a href="https://t.me">@vkusno</a></li>
-            <li><b>YouTube:</b> <a href="https://youtube.com">://youtube.com</a></li>
-            <li><b>Телефон:</b> <a href="tel:+79001234567">+7 (900) 123-45-67</a></li>
-        </ul>
+        <h3><font color="#e65100">Контакты и соцсети</font></h3>
+        <div style="display: flex; flex-direction: column; max-width: 320px; margin-top: 15px;">
+            
+            <a href="mailto:hello@vkusno.ru" class="contact-card">
+                <span style="font-size: 18px; margin-right: 12px; display: inline-block;">✉️</span>
+                <span style="color: #3e2723; font-size: 15px; font-weight: bold;">Написать на Email</span>
+            </a>
 
-        <a name="social"></a>
-        <h3><font color="#e65100">Соцсети</font></h3>
-        <ul type="circle">
-            <li><a href="#">VKontakte</a></li>
-            <li><a href="#">Telegram Канал</a></li>
-            <li><a href="#">YouTube Блог</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
+            <a href="tel:+79001234567" class="contact-card">
+                <span style="font-size: 18px; margin-right: 12px; display: inline-block;">📞</span>
+                <span style="color: #3e2723; font-size: 15px; font-weight: bold;">Позвонить нам</span>
+            </a>
+
+            <a href="https://vk.com" target="_blank" class="contact-card">
+                <span style="font-size: 18px; margin-right: 12px; display: inline-block;">🔵</span>
+                <span style="color: #3e2723; font-size: 15px; font-weight: bold;">Мы ВКонтакте</span>
+            </a>
+
+            <a href="https://t.me" target="_blank" class="contact-card">
+                <span style="font-size: 18px; margin-right: 12px; display: inline-block;">✈️</span>
+                <span style="color: #3e2723; font-size: 15px; font-weight: bold;">Наш Telegram-канал</span>
+            </a>
+
+            <a href="https://youtube.com" target="_blank" class="contact-card">
+                <span style="font-size: 18px; margin-right: 12px; display: inline-block;">🔴</span>
+                <span style="color: #3e2723; font-size: 15px; font-weight: bold;">Смотреть на YouTube</span>
+            </a>
+
+            <a href="https://instagram.com" target="_blank" class="contact-card">
+                <span style="font-size: 18px; margin-right: 12px; display: inline-block;">📸</span>
+                <span style="color: #3e2723; font-size: 15px; font-weight: bold;">Мы в Instagram</span>
+            </a>
+
+        </div>
     </td>
     <td width="50%" valign="top">
         <h3><font color="#e65100">Наш адрес</font></h3>
@@ -165,26 +224,41 @@
             Пн-Пт: 09:00 – 18:00<br>
             Сб: 10:00 – 15:00
         </p>
-        <p align="center" style="margin-top: 15px;">
-            <img src="images/map.jpg" alt="Карта проезда" width="100%" border="0" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid rgba(230,81,0,0.1);">
-            <br>
-            <font size="2" color="#8d6e63"><i>Карта проезда</i></font>
+        <p align="center" style="margin-top: 25px;">
+            <a href="https://yandex.ru" target="_blank" class="map-link-card">
+                <div style="background-color: #ffffff; border: 2px dashed #e65100; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(62, 39, 35, 0.1); text-align: center;">
+                    <span style="font-size: 40px; display: block; margin-bottom: 10px;">🗺️</span>
+                    <b style="color: #e65100; font-size: 16px; display: block; margin-bottom: 5px;">Открыть карту проезда</b>
+                    <font size="2" color="#8d6e63" style="display: block;">Нажмите, чтобы построить маршрут до студии «Вкусно» (на ПК откроются Яндекс Карты, на телефоне — Навигатор)</font>
+                </div>
+            </a>
         </p>
     </td>
 </tr>
 </table>
 
-<hr color="#e65100" size="1" style="margin: 30px 0;">
-<blockquote style="background-color: #fff3e0; border-left: 4px solid #e65100; padding: 15px 20px; margin: 20px auto; border-radius: 0 8px 8px 0; max-width: 85%;">
-    <p style="margin: 0; font-size: 16px;"><i>«Готовить дома – это очень просто. Главное – начать делать это с душой и любовью.»</i></p>
-    <p align="right" style="margin: 5px 0 0 0; color: #e65100;"><b>— Анастасия, автор блога</b></p>
-</blockquote>
-
-<p align="center">
-    <font size="2" color="#8d6e63">
-        Спецсимволы: &copy; &reg; &trade; &hearts; &rarr; &larr; &uarr; &darr;
-    </font>
-</p>
+<hr color="#e65100" size="1" style="margin: 40px 0 20px 0;">
+<table width="100%" cellpadding="10" cellspacing="0" border="0" bgcolor="#fff3e0" style="border-radius: 8px; box-shadow: 0 -2px 10px rgba(62, 39, 35, 0.05);">
+<tr>
+    <td align="left" valign="middle" style="padding-left: 20px;">
+        <font size="3" color="#3e2723"><b>🍳 Вкусно и просто</b></font><br>
+        <font size="2" color="#8d6e63">Домашние рецепты каждый день &copy; 2026</font>
+    </td>
+    <td align="center" valign="middle">
+        <font size="2" color="#8d6e63">
+            <a href="index.html" style="text-decoration: none; color: #e65100; margin: 0 5px;">Главная</a> | 
+            <a href="recipes.html" style="text-decoration: none; color: #e65100; margin: 0 5px;">Рецепты</a> | 
+            <a href="about.html" style="text-decoration: none; color: #e65100; margin: 0 5px;">О блоге</a>
+        </font>
+    </td>
+    <td align="right" valign="middle" style="padding-right: 20px;">
+        <font size="2" color="#8d6e63">
+            Сделано с &hearts; для любителей готовить
+        </font>
+    </td>
+</tr>
+</table>
 
 </body>
 </html>
+

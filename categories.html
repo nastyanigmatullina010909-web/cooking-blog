@@ -39,6 +39,65 @@
             margin-bottom: 10px;
             padding-left: 5px;
         }
+                /* Стилизация контейнеров для категорий */
+        .category-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(62, 39, 35, 0.05);
+            border: 1px solid rgba(230, 81, 0, 0.12);
+        }
+
+        /* Оформление главных списков */
+        .category-list {
+            list-style: none; /* Убираем стандартные черные точки */
+            padding-left: 0;
+            margin: 15px 0 0 0;
+        }
+
+        /* Главные пункты меню (например, Паста, Мясо, Пироги) */
+        .category-item {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        /* Оформление вложенных списков (сами рецепты) */
+        .subcategory-list {
+            list-style: none; /* Убираем пустые кружочки и цифры */
+            padding-left: 20px; /* Делаем аккуратный отступ вправо */
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Сами кликабельные рецепты внутри категорий */
+        .recipe-link-item {
+            display: inline-flex;
+            align-items: center;
+            background: #fff8f0;
+            color: #3e2723;
+            padding: 8px 14px;
+            border-radius: 6px;
+            margin: 4px 6px 4px 0;
+            font-size: 14px;
+            font-weight: normal;
+            text-decoration: none;
+            border: 1px solid rgba(230, 81, 0, 0.08);
+            /* Плавный эффект при наведении */
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Эффект при наведении мышки на рецепт */
+        .recipe-link-item:hover {
+            background: #e65100;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(230, 81, 0, 0.2);
+        }
+
     </style>
 </head>
 <body bgcolor="#fff8f0" text="#3e2723" link="#e65100" vlink="#6d4c41" alink="#ff9800">
@@ -153,19 +212,30 @@
 </tr>
 </table>
 
-<br><br>
-<hr color="#e65100" size="1">
-<table width="85%" align="center" cellpadding="10" border="0">
+<!-- ЕДИНЫЙ ФУТЕР САЙТА -->
+<hr color="#e65100" size="1" style="margin: 40px 0 20px 0;">
+<table width="100%" cellpadding="10" cellspacing="0" border="0" bgcolor="#fff3e0" style="border-radius: 8px; box-shadow: 0 -2px 10px rgba(62, 39, 35, 0.05);">
 <tr>
-    <td align="left">
+    <td align="left" valign="middle" style="padding-left: 20px;">
+        <font size="3" color="#3e2723"><b>🍳 Вкусно и просто</b></font><br>
+        <font size="2" color="#8d6e63">Домашние рецепты каждый день &copy; 2026</font>
+    </td>
+    <td align="center" valign="middle">
         <font size="2" color="#8d6e63">
-            &copy; 2024 «Вкусно и просто». Все права защищены.<br>
-            Сайт создан прекрасным автором по имени <b>Анастасия</b>
+            <a href="index.html" style="text-decoration: none; color: #e65100; margin: 0 5px;">Главная</a> | 
+            <a href="recipes.html" style="text-decoration: none; color: #e65100; margin: 0 5px;">Рецепты</a> | 
+            <a href="about.html" style="text-decoration: none; color: #e65100; margin: 0 5px;">О блоге</a>
         </font>
     </td>
-    <td align="right"><a href="#top" style="text-decoration: none; font-size: 14px;">Наверх ↑</a></td>
+    <td align="right" valign="middle" style="padding-right: 20px;">
+        <font size="2" color="#8d6e63">
+            Сделано с &hearts; для любителей готовить
+        </font>
+    </td>
 </tr>
 </table>
+<!-- КОНЕЦ ЕДИНЫГО ФУТЕРА -->
+
 
 </body>
 </html>
